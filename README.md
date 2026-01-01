@@ -1,7 +1,7 @@
-# Snowfort Config
+# Snowfart Config
 
-[![CI](https://github.com/snowfort-ai/config/actions/workflows/ci.yml/badge.svg)](https://github.com/snowfort-ai/config/actions/workflows/ci.yml)
-[![npm version](https://badge.fury.io/js/@snowfort%2Fconfig.svg)](https://badge.fury.io/js/@snowfort%2Fconfig)
+[![CI](https://github.com/snowfart-ai/config/actions/workflows/ci.yml/badge.svg)](https://github.com/snowfart-ai/config/actions/workflows/ci.yml)
+[![npm version](https://badge.fury.io/js/@snowfart%2Fconfig.svg)](https://badge.fury.io/js/@snowfart%2Fconfig)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen.svg)](https://nodejs.org/)
 [![pnpm](https://img.shields.io/badge/maintained%20with-pnpm-cc00ff.svg)](https://pnpm.io/)
@@ -12,11 +12,11 @@ A lightweight, cross-platform utility for reading, displaying, and safely editin
 
 ```bash
 # Launch Web UI (no installation required)
-npx @snowfort/config
+npx @snowfart/config
 
 # Or install globally
-npm install -g @snowfort/config
-snowfort-config --help
+npm install -g @snowfart/config
+snowfart-config --help
 ```
 
 ## ✨ Features
@@ -37,12 +37,12 @@ snowfort-config --help
 
 ```bash
 # Launch Web UI (default)
-npx @snowfort/config
-# or: snowfort-config (if installed globally)
+npx @snowfart/config
+# or: snowfart-config (if installed globally)
 
 # Launch Web UI with custom port
-npx @snowfort/config --port 3000
-# or: snowfort-config --port 3000
+npx @snowfart/config --port 3000
+# or: snowfart-config --port 3000
 ```
 
 ### Cross-Engine MCP Server Management
@@ -58,16 +58,16 @@ One of the key features is the ability to copy MCP server configurations between
 ### Via npm/npx (Recommended)
 ```bash
 # Install globally
-npm install -g @snowfort/config
+npm install -g @snowfart/config
 
 # Or use with npx (no installation required)
-npx @snowfort/config
+npx @snowfart/config
 ```
 
 ### From Source
 ```bash
 # Clone the repository
-git clone https://github.com/snowfort-ai/config.git
+git clone https://github.com/snowfart-ai/config.git
 cd config
 
 # Install dependencies
@@ -81,19 +81,19 @@ pnpm build
 
 ```bash
 # Default behavior (launches web UI)
-snowfort-config                    # Launch web UI on port 4040
+snowfart-config                    # Launch web UI on port 4040
 
 # Web UI options
-snowfort-config --port 3000        # Custom port
-snowfort-config --no-open          # Don't auto-open browser
-snowfort-config --no-update-check  # Disable update notifications
-snowfort-config --config /path     # Custom config path
+snowfart-config --port 3000        # Custom port
+snowfart-config --no-open          # Don't auto-open browser
+snowfart-config --no-update-check  # Disable update notifications
+snowfart-config --config /path     # Custom config path
 
 # Subcommand style (also supported)
-snowfort-config web [options]      # Web UI subcommand
+snowfart-config web [options]      # Web UI subcommand
 
 # Show help
-snowfort-config --help
+snowfart-config --help
 ```
 
 ## 🛠️ Development
@@ -108,10 +108,10 @@ pnpm install
 pnpm build
 
 # Build only core package
-pnpm --filter @snowfort/config-core run build
+pnpm --filter @snowfart/config-core run build
 
 # Build only web app (includes server)
-pnpm --filter @snowfort/config-web run build
+pnpm --filter @snowfart/config-web run build
 
 # IMPORTANT: Web development uses build-first workflow
 # Start development server (builds frontend + starts server)
@@ -161,7 +161,7 @@ Current adapters: `ClaudeAdapter` (`~/.claude.json`), `CodexAdapter` (`~/.codex/
 
 ## Configuration Schemas & File Formats
 
-Snowfort Config supports **3 engine adapters** with comprehensive configuration management:
+snowfart Config supports **3 engine adapters** with comprehensive configuration management:
 
 ### 1. Claude Code CLI (`claude-code`)
 
@@ -304,7 +304,7 @@ Same structure as Claude Code:
 4. **Event Broadcasting**: State changes notify the web interface via events
 
 ### Safe Configuration Management
-- **Automatic Backups**: Timestamped `.json` files in `.snowfort-config-backups/`
+- **Automatic Backups**: Timestamped `.json` files in `.snowfart-config-backups/`
 - **Schema Validation**: AJV validation (currently permissive to allow unknown fields)
 - **Atomic Operations**: Failed writes never corrupt original files
 - **Deep Merging**: Patch operations preserve unknown configuration fields
